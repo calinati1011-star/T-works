@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: black;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.box {
+    text-align: center;
+    padding: 20px;
+}
+h1 {
+    position: relative;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: transparent;
+    margin-bottom: 30px;
+}
+h1 span {
+    color: white;
+    font-weight: 700;
+}
+h1::before,
+h1::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+h1::before {
+    clip-path: polygon(0 0, 55% 0, 45% 100%, 0 100%);
+    font-weight: 400;
+}
+h1::after {
+    clip-path: polygon(55% 0, 100% 0, 100% 100%, 45% 100%);
+    font-weight: 700;
+}
+.desc {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    font-size: 1.1rem;
+}
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.social a {
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 10px 20px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.social a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 300%;
+    background: white;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: width 0.4s ease;
+    z-index: 0;
+}
+.social a:hover::before {
+    width: 200%;
+}
+.social a:hover {
+    color: black;
+    transform: rotate(-1deg) scale(1.05);
+    border-color: white;
+}
+.social a span {
+    position: relative;
+    z-index: 1;
+}
+.email {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+.logo img {
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+}
+.logo2 img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 60px;
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    .desc {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    .social a {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    .logo img,
+    .logo2 img {
+        width: 150px;
+        margin-bottom: 30px;
+        margin-top: 10px;
+    }
+}
+

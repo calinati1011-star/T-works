@@ -44,8 +44,12 @@ document.getElementById('contactForm').addEventListener('submit', function(e){
         body: formData
     }).then(response => response.text())
     .then(data => {
-        document.getElementById('successMsg').innerText = 'Domanda inviata';
-        document.getElementById('contactForm').reset();
+        if(data.trim() === "ok"){
+            document.getElementById('successMsg').innerText = 'Domanda inviata';
+            document.getElementById('contactForm').reset();
+        } else {
+            document.getElementById('successMsg').innerText = 'Errore, riprova';
+        }
     }).catch(err => {
         document.getElementById('successMsg').innerText = 'Errore, riprova';
     });

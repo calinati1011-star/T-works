@@ -6,23 +6,33 @@
 <title>T-WORKS</title>
 <link rel="stylesheet" href="Tstyle.css">
 <link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<!-- se ha idee per il sito manda un email o scrivimi sull'account instagram :) -->
 <body>
 <div class="box">
-<div class="logo2">
-<img src="logo.png" alt="Logo T-WORKS">
+    <div class="logo2">
+        <img src="logo.png" alt="Logo T-WORKS">
+    </div>
+    <h1 data-text="T-WORKS COMING SOON"><span>T-WORKS</span> COMING SOON</h1>
+    <p class="desc">Sono Tiron, aiutami a realizzare il mio sogno di creare una azienda di elettronica e riparazioni. Al momento sto studiando e pensando al progetto.</p>
+    <div class="social">
+        <a class="btn-creative" href="http://www.tiktok.com/@nrtqx"><span>TIKTOK</span></a>
+        <a class="btn-creative" href="https://www.instagram.com/tworks.it"><span>INSTAGRAM</span></a>
+    </div>
+    <p class="email">email: <a href="mailto:info@t-works.it">info@t-works.it</a></p>
+    <div class="logo">
+        <img src="logo.png" alt="Logo T-WORKS">
+    </div>
 </div>
-<h1 data-text="T-WORKS COMING SOON"><span>T-WORKS</span> COMING SOON</h1>
-<p class="desc">Sono Tiron, aiutami a realizzare il mio sogno di creare una azienda di elettronica e riparazioni. Al momento sto studiando e pensando al progetto.</p>
-<div class="social">
-<a class="btn-creative" href="http://www.tiktok.com/@nrtqx"><span>TIKTOK</span></a>
-<a class="btn-creative" href="https://www.instagram.com/tworks.it"><span>INSTAGRAM</span></a>
-</div>
-<p class="email">email: info@t-works.it</p>
-<div class="logo">
-<img src="logo.png" alt="Logo T-WORKS">
-</div>
+<div class="contact-box">
+    <h2>Domande?</h2>
+    <form action="save_message.php" method="POST">
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="text" name="cognome" placeholder="Cognome" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="messaggio" placeholder="Messaggio" required></textarea>
+        <button class="btn-creative" type="submit"><span>INVIA</span></button>
+    </form>
 </div>
 </body>
 </html>

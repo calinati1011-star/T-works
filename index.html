@@ -26,13 +26,30 @@
 </div>
 <div class="contact-box">
     <h2>Domande?</h2>
-    <form action="save_message.php" method="POST">
+    <form id="contactForm" method="POST">
         <input type="text" name="nome" placeholder="Nome" required>
         <input type="text" name="cognome" placeholder="Cognome" required>
         <input type="email" name="email" placeholder="Email" required>
         <textarea name="messaggio" placeholder="Messaggio" required></textarea>
         <button class="btn-creative" type="submit"><span>INVIA</span></button>
+        <p class="success-msg" id="successMsg"></p>
     </form>
 </div>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var formData = new FormData(this);
+    fetch('save_message.php',{
+        method:'POST',
+        body: formData
+    }).then(response => response.text())
+    .then(data => {
+        document.getElementById('successMsg').innerText = 'Domanda inviata';
+        document.getElementById('contactForm').reset();
+    }).catch(err => {
+        document.getElementById('successMsg').innerText = 'Errore, riprova';
+    });
+});
+</script>
 </body>
 </html>

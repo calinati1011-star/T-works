@@ -176,6 +176,11 @@ h1::after {
     color: black;
     background: linear-gradient(135deg, #ffffff, #eaeaea, #cccccc);
 }
+.contact-box .success-msg {
+    margin-top: 10px;
+    color: #0f0;
+    font-weight: 600;
+}
 @media (max-width: 600px) {
     .logo2 {
         margin-bottom: 25px;

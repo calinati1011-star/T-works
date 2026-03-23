@@ -14,7 +14,7 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     padding: 20px;
 }
-/* se ha idee per il sito manda un email o scrivimi sull'account instagram :) */
+/* se hai idee per il sito manda un email o scrivimi sull'account instagram :) */
 .box {
     text-align: center;
     width: 100%;
@@ -44,14 +44,7 @@ h1::after {
     color: white;
     text-align: center;
 }
-h1::before {
-    clip-path: polygon(0 0, 55% 0, 45% 100%, 0 100%);
-    font-weight: 400;
-}
-h1::after {
-    clip-path: polygon(55% 0, 100% 0, 100% 100%, 45% 100%);
-    font-weight: 700;
-}
+
 .desc {
     max-width: 90%;
     margin: 0 auto 25px;
@@ -112,6 +105,7 @@ h1::after {
 @media (max-width: 600px) {
     .logo2 {
         margin-bottom: 25px;
+        
     }
     .logo img,
     .logo2 img {
